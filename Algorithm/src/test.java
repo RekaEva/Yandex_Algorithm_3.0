@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import java.util.Stack;
 
 //public class test {
@@ -36,7 +37,7 @@ public class test {
     public static void main(String[] args) {
         // массив для хранения операндов и знаков
 //        String[] expression = {"6", "3", "1", "4", "5", "*", "+", "*", "2", "*", "+"};
-        String[] expression = {"5", "3", "-"};
+        String[] expression = {"8", "9", "+", "1", "7", "-", "*"};
         int result = 0;
         // стек для хранения результатов вычислений
         Stack<Integer> stack = new Stack<>();
@@ -52,13 +53,13 @@ public class test {
                         result = a + b;
                         break;
                     case "-":
-                        result = a - b;
+                        result = b - a;
                         break;
                     case "*":
                         result = a * b;
                         break;
                     case "/":
-                        result = a / b;
+                        result = b / a;
                         break;
                 }
                 // и добавляем результат операции в стек
@@ -71,3 +72,25 @@ public class test {
         return s.equals("+") || s.equals("-") || s.equals("*") || s.equals("/");
     }
 }
+
+//
+//    int week = 0;
+//    String line;
+//    long allGrades = 0;
+//
+//    Scanner input = new Scanner(System.in);
+//        line = readString(input);
+//                while (week < maxWeeks && !"42".equals(line)) {
+//        week++;
+//        if (!("Week " + week).equals(line)) {
+//        error();
+//        }
+//        allGrades *= 10;
+//        allGrades += getMin(input);
+//        line = readString(input);
+//        }
+//        input.close();
+
+
+
+
