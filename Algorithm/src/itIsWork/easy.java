@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+package find_min_right;
+>>>>>>> bff62ac758b010a1f6385338a2330aa14fe50fdf
 
 import java.io.BufferedReader;
 import java.io.IOException;
