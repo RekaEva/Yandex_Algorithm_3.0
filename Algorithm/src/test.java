@@ -154,6 +154,7 @@ import java.util.List;
 //        }
 //    }
 //}
+<<<<<<< HEAD
 //public class test {
 //    public static void quickSort(int[] array, int start, int end) {
 //        if (start < end) {
@@ -184,6 +185,38 @@ import java.util.List;
 //        return i + 1;
 //    }
 //}
+=======
+public class test {
+    public static void quickSort(int[] array, int start, int end) {
+        if (start < end) {
+            int partitionIndex = partition(array, start, end);
+
+            quickSort(array, start, partitionIndex - 1);
+            quickSort(array, partitionIndex + 1, end);
+        }
+    }
+
+    private static int partition(int[] array, int start, int end) {
+        int pivot = array[end];
+        int i = start - 1;
+
+        for (int j = start; j < end; j++) {
+            if (array[j] <= pivot) {
+                i++;
+                int temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+
+        int temp = array[i + 1];
+        array[i + 1] = array[end];
+        array[end] = temp;
+
+        return i + 1;
+    }
+}
+>>>>>>> 83cae44aa11ee6da0bf3f55f45a97c8ab40efe01
 //2 4 6 8 0
 //        1 3 5 7 9
 
@@ -210,6 +243,7 @@ import java.util.List;
 //        0 365
 //        1
 //        1
+<<<<<<< HEAD
 //        11
 //        1
 
@@ -433,5 +467,36 @@ public class test {
 //        }
 //        scanner.close();
 //        }
+=======
+//        1
+//        1
+>>>>>>> 83cae44aa11ee6da0bf3f55f45a97c8ab40efe01
 
 
+//    public static void quickSort(int[] array, int start, int end) {
+//        if (start < end) {
+//            int partitionIndex = partition(array, start, end);
+//
+//            quickSort(array, start, partitionIndex-1);
+//            quickSort(array, partitionIndex+1, end);
+//        }
+//    }
+//    private static int partition(int[] array, int start, int end) {
+//        int pivot = array[end];
+//        int i = start-1;
+//
+//        for (int j=start; j<end; j++) {
+//            if (array[j] <= pivot) {
+//                i++;
+//                int temp = array[i];
+//                array[i] = array[j];
+//                array[j] = temp;
+//            }
+//        }
+//
+//        int temp = array[i+1];
+//        array[i+1] = array[end];
+//        array[end] = temp;
+//
+//        return i+1;
+//    }

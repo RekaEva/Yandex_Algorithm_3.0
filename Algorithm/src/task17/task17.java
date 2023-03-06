@@ -22,6 +22,9 @@ public class task17 {
             second.add(s);
             i++;
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
         int counter = 0;
         int flag = 0;
         while (first.size() != 10 && second.size() != 10)
@@ -42,20 +45,76 @@ public class task17 {
                 flag = 1;
             }
             else if ((first.getFirst()  < second.getFirst()) && flag == 0)
-            {
+=======
+//        System.out.println(first);
+//        System.out.println(second);
+>>>>>>> 83cae44aa11ee6da0bf3f55f45a97c8ab40efe01
+        int counter = 0;
+        int flag = 0;
+        while (first.size() != 10 && second.size() != 10)
+        {
+<<<<<<< HEAD
+            if ((first.getFirst() == 9 && second.getFirst() == 0)){
                 second.addLast(first.removeFirst());
                 int tmp = second.removeFirst();
                 second.addLast(tmp);
                 counter ++;
+                flag = 1;
             }
-            else if ((first.getFirst()  > second.getFirst()) && flag == 0)
+            else if (first.getFirst() == 0 && second.getFirst() == 9)
             {
                 int tmp = first.removeFirst();
                 first.addLast(tmp);
                 first.addLast(second.removeFirst());
                 counter ++;
+                flag = 1;
+            }
+            else if ((first.getFirst()  < second.getFirst()) && flag == 0)
+=======
+            if (first.getFirst()  < second.getFirst() || (first.getFirst() == 9 && second.getFirst() == 0))
+>>>>>>> bff62ac758b010a1f6385338a2330aa14fe50fdf
+>>>>>>> 83cae44aa11ee6da0bf3f55f45a97c8ab40efe01
+            {
+                second.addLast(first.removeFirst());
+                int tmp = second.removeFirst();
+                second.addLast(tmp);
+                counter ++;
+<<<<<<< HEAD
+            }
+            else if ((first.getFirst()  > second.getFirst()) && flag == 0)
+=======
+<<<<<<< HEAD
+            }
+            else if ((first.getFirst()  > second.getFirst()) && flag == 0)
+=======
+                System.out.println(" ");
+                System.out.println("first: " + first);
+                System.out.println("second:  " + second);
+                System.out.println(" ");
+            }
+            else if (first.getFirst()  > second.getFirst() || (first.getFirst() == 0 && second.getFirst() == 9))
+>>>>>>> bff62ac758b010a1f6385338a2330aa14fe50fdf
+>>>>>>> 83cae44aa11ee6da0bf3f55f45a97c8ab40efe01
+            {
+                int tmp = first.removeFirst();
+                first.addLast(tmp);
+                first.addLast(second.removeFirst());
+                counter ++;
+<<<<<<< HEAD
             }
             flag = 0;
+=======
+<<<<<<< HEAD
+            }
+            flag = 0;
+=======
+                System.out.println(" ");
+                System.out.println("first: " + first);
+                System.out.println("second:  " + second);
+                System.out.println(" ");
+            }
+>>>>>>> bff62ac758b010a1f6385338a2330aa14fe50fdf
+>>>>>>> 83cae44aa11ee6da0bf3f55f45a97c8ab40efe01
         }
         if (first.size() == 10)
             System.out.println("first " + counter);
