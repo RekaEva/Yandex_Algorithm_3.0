@@ -1,4 +1,3 @@
-package find_min_right;
 
 import java.io.BufferedReader;
 import java.io.IOException;

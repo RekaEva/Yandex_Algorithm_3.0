@@ -22,33 +22,40 @@ public class task17 {
             second.add(s);
             i++;
         }
-//        System.out.println(first);
-//        System.out.println(second);
         int counter = 0;
+        int flag = 0;
         while (first.size() != 10 && second.size() != 10)
         {
-            if (first.getFirst()  < second.getFirst() || (first.getFirst() == 9 && second.getFirst() == 0))
-            {
+            if ((first.getFirst() == 9 && second.getFirst() == 0)){
                 second.addLast(first.removeFirst());
                 int tmp = second.removeFirst();
                 second.addLast(tmp);
                 counter ++;
-                System.out.println(" ");
-                System.out.println("first: " + first);
-                System.out.println("second:  " + second);
-                System.out.println(" ");
+                flag = 1;
             }
-            else if (first.getFirst()  > second.getFirst() || (first.getFirst() == 0 && second.getFirst() == 9))
+            else if (first.getFirst() == 0 && second.getFirst() == 9)
             {
                 int tmp = first.removeFirst();
                 first.addLast(tmp);
                 first.addLast(second.removeFirst());
                 counter ++;
-                System.out.println(" ");
-                System.out.println("first: " + first);
-                System.out.println("second:  " + second);
-                System.out.println(" ");
+                flag = 1;
             }
+            else if ((first.getFirst()  < second.getFirst()) && flag == 0)
+            {
+                second.addLast(first.removeFirst());
+                int tmp = second.removeFirst();
+                second.addLast(tmp);
+                counter ++;
+            }
+            else if ((first.getFirst()  > second.getFirst()) && flag == 0)
+            {
+                int tmp = first.removeFirst();
+                first.addLast(tmp);
+                first.addLast(second.removeFirst());
+                counter ++;
+            }
+            flag = 0;
         }
         if (first.size() == 10)
             System.out.println("first " + counter);

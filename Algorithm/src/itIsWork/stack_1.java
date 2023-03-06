@@ -1,4 +1,4 @@
-package yandex_stack;
+
 
 import java.util.*;
 
