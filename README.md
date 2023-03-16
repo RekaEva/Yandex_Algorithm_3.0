@@ -1,4 +1,4 @@
-Решения задач с ["Тренировок по алгоритмам 3.0"](https://yandex.ru/yaintern/algorithm-training) от Яндекса.\
+Решения задач с ["Тренировок по алгоритмам 3.0"](https://yandex.ru/yaintern/algorithm-training) от Яндекса.
 
 Темы тренировок: \
     1)Стеки\
